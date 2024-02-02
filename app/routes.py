@@ -2,6 +2,11 @@ from app import app
 from flask import render_template
 
 @app.route('/')
+
+#@app.base('/base')
+#def base():
+#    return render_template('base.html')
+
 @app.route('/index')
 def index():
     nome = "Fulano de Tals"
@@ -11,3 +16,8 @@ def index():
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
